@@ -18,7 +18,7 @@ message.addEventListener('keypress', () => {
 });
 
 socket.on('chat:message', (data) => {
-	let date = Date();
+	let date = new Date().toLocaleString();
 	output.innerHTML += `<p>${date}
 	<strong>${data.username}</strong>: ${data.message}
 	</p>`
